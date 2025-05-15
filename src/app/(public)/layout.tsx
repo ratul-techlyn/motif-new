@@ -4,7 +4,6 @@ import TopBar from "@/components/shared/Navbar/TopBar";
 import Footer from "@/components/shared/footer/Footer";
 import type React from "react";
 import { useEffect, useRef } from "react";
-import Lenis from "@studio-freight/lenis";
 import { gsap } from "gsap";
 import { ScrollSmoother, ScrollTrigger } from "gsap/all";
 

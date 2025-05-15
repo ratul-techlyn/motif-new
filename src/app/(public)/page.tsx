@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
@@ -20,7 +20,6 @@ import Recommandations from "./~comp/Recommandations";
 gsap.registerPlugin(ScrollTrigger);
 
 export default function Home() {
-  const sectionsRef = useRef<(HTMLDivElement | null)[]>([]);
   const iconSize = useResponsiveSize();
 
   useEffect(() => {}, []);
