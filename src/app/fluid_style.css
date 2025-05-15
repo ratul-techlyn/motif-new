@@ -1,0 +1,115 @@
+
+:root {
+    --container-widget-width: 88%;
+}
+
+/* Define the variable in a media query */
+@media (min-width: 768px) {
+    .page_section {
+      --content-width: 70vw;
+    }
+  }
+
+/*
+@layer components {
+
+    .page_section {
+      @apply w
+    }
+} */
+
+
+
+/* banner text image start */
+@keyframes hero_text_img_ANI {
+    0% {
+      background-image: url("/assets/home/hero/hero1.webp");
+    }
+    25% {
+      background-image: url("/assets/home/hero/hero2.webp");
+    }
+    50% {
+      background-image: url("/assets/home/hero/hero3.webp");
+    }
+    75% {
+      background-image: url("/assets/home/hero/hero4.webp");
+    }
+    100% {
+      background-image: url("/assets/home/hero/hero1.webp"); /* Loop back to the first image */
+    }
+}
+.hero_ani_text {
+    animation: hero_text_img_ANI 10s infinite;
+    background-size: cover;
+    background-position: center;
+  }
+
+
+  /* __rolling text start  */
+  /* Keyframe Animation for text rotation */
+  @keyframes rollingTextAnimation {
+    0%,100% {
+        transform: translateY(0);
+    }
+    20% {
+        transform: translateY(-25%);
+    }
+    40% {
+        transform: translateY(-50%);
+    }
+    65% {
+        transform: translateY(-75%);
+    }
+    80% {
+        transform: translateY(-100%);
+    }
+}
+
+.rolling-texts {
+    display: block;
+    animation: rollingTextAnimation 10s infinite ease-in-out;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.rolling-texts span {
+    display: block;
+}
+
+.inner-circle.of-o {
+    display: inline-block;
+    transition: transform 0.5s ease;
+    transform-origin: center;
+}
+
+.circle {
+    border-radius: 50%;
+}
+
+.rolling-text-container {
+    display: inline-flex;
+    align-items: center;
+}
+
+.inner-circle-container {
+    position: relative;
+    margin-right: 0.5rem;
+}
+
+.rolling-text-inner-container {
+    display: inline-block;
+    overflow: hidden;
+}
+
+.roll_fixed_word {
+    margin-left: 0.5rem;
+}
+
+
+/* test roll st */
+
+/* test roll ed */
+
+  /* __rolling text end  */
+
+/* banner text image end */

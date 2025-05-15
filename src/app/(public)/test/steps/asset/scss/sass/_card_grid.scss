@@ -1,0 +1,130 @@
+.j_card_grid_section {
+  padding: 120px 0;
+  color: #fff;
+  overflow: hidden;
+
+  .grid_row {
+    display: grid;
+    max-width: 1400px;
+    padding: 0 15px;
+    margin: 0 auto;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 26px;
+  }
+
+  .j_card {
+    background-color: red;
+    background-image: url("./../image/bg.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 36px 30px;
+    border-radius: 24px;
+    color: #fff;
+    font-family: $Inter;
+    font-style: normal;
+    line-height: normal;
+    height: 100%;
+    position: relative;
+
+    .card_content {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 130px;
+      height: 100%;
+      position: relative;
+      z-index: 1;
+
+      .top_content {
+        .count_badge {
+          font-size: 16px;
+          font-weight: 500;
+          margin-bottom: 80px;
+          display: block;
+          padding: 0 10px;
+          width: fit-content;
+          border-left: 2px solid #fff;
+          border-right: 2px solid #fff;
+        }
+
+        .text_content {
+          .title {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 24px;
+          }
+
+          .pera {
+            font-size: 16px;
+            font-weight: 400;
+          }
+        }
+      }
+
+      .bottom_content {
+        .j_button {
+          border: none;
+          height: 70px;
+          width: 70px;
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding: 20px;
+
+          svg {
+            width: 100%;
+            height: 100%;
+          }
+
+          &,
+          & * {
+            cursor: pointer;
+          }
+        }
+      }
+    }
+
+    &::before {
+      content: "";
+      width: 110%;
+      height: 100%;
+      background-image: url("./../image/shape.png");
+      background-position: left bottom;
+      background-size: 100% auto;
+      background-repeat: no-repeat;
+      position: absolute;
+      left: 50%;
+      bottom: -10px;
+      transform: translate(-50%, 0);
+      z-index: 0;
+      transition: all linear 350ms;
+      opacity: 0;
+      visibility: hidden;
+    }
+
+    &:hover {
+      &::before {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .j_card_grid_section {
+    .grid_row {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .j_card_grid_section {
+    .grid_row {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+}
