@@ -39,6 +39,7 @@ const TitleMixImg: React.FC<TitleMixImgProps> = ({ data,classNameLine,classNameT
             opacity: 1,
             delay: imageDelay,
             duration: 1,
+            stagger: 0.3,
             ease: "power3.out",
           }
         );

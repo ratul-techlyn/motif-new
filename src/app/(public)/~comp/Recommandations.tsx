@@ -29,7 +29,7 @@ const recommendations = [
   },
   {
     quote: [
-      "The team at this agency has been instrumental in our growth. Their dedication to excellence is unmatched.They provided us with creative solutions that helped us reach our business goals faster than expected.I&#39;m grateful for their efforts and would recommend them to anyone looking for high-quality, effective services.",
+      "The team at this agency has been instrumental in our growth. Their dedication to excellence is unmatched.They provided us with creative solutions that helped us reach our business goals faster than expected.I'm grateful for their efforts and would recommend them to anyone looking for high-quality, effective services.",
     ],
     name: "Michael Brown",
     position: "Founder",

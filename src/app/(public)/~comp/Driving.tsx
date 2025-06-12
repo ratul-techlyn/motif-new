@@ -51,32 +51,42 @@ const Driving = () => {
         const timeline = gsap.timeline({
           scrollTrigger: {
             trigger: cardContainerRef.current,
-            start: "top center-=200",
-            // end: "bottom center+=200",
-            // toggleActions: "play reverse play reverse",
-          }
+            start: "top center",
+            end: "top top-=200",
+            scrub: true,
+            toggleActions: "play reverse play reverse",
+          },
         });
-        timeline
-          .from(cards, {
-            y: 100,
-            x: (index) => (index % 2 === 0 ? -500 : 500),
-            rotate: (index) => (index % 2 === 0 ? -45 : 45),
-            duration: 1,
-            stagger: 0.2,
-            ease: "power3.out",
-          }).from(ammounts, {
-            textContent: 0,
-            duration: 1,
-            stagger: 0.2,
-            ease: "power3.out",
-            snap: { textContent: 0.1 },
-          })
+
+        timeline.from(cards, {
+          y: 100,
+          x: (index) => (index % 2 === 0 ? -500 : 500),
+          rotate: (index) => (index % 2 === 0 ? -45 : 45),
+          duration: 1,
+          stagger: 0.2,
+          ease: "power1.inOut",
+        });
+
+        // timeline.eventCallback("onUpdate", (self) => {
+        //   console.log(self);
+        //   gsap.from(ammounts, {
+        //     textContent: 0,
+        //     opacity: 0,
+        //     duration: 1,
+        //     stagger: 0.2,
+        //     ease: "power3.out",
+        //     snap: { textContent: 0.1 },
+        //   });
+        // });
       }
     }
   }, []);
 
   return (
-    <section ref={cardContainerRef} className="layout_normal mt-40 md:mt-60 w-[90%] md:w-[90%] lg:w-[70%]">
+    <section
+      ref={cardContainerRef}
+      className="layout_normal mt-40 md:mt-60 w-[90%] md:w-[90%] lg:w-[70%]"
+    >
       <div className="mt-28 text-typo-primary">
         <div className="w-full md:w-[60%] lg:w-[50%] xl:w-[40%]">
           <h2 className="capitalize text-section_heading_sm md:text-section_heading_md lg:text-section_heading_lg 2xl:text-section_heading_2xl 3xl:text-[clamp(50px,2.5vw,60px)] font-semibold font-clash leading-[1.2em] ">
@@ -95,9 +105,7 @@ const Driving = () => {
           </h2>
         </div>
       </div>
-      <div
-        className="grid grid-cols-1 md:grid-cols-2 gap-y-[20px] md:gap-y-0 gap-x-[20px] text-typo-primary mt-20"
-      >
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-y-[20px] md:gap-y-0 gap-x-[20px] text-typo-primary mt-20">
         {data.map((el, idx) => (
           <div className="card" key={el.id}>
             <BlurredCard

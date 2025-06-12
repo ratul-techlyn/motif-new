@@ -27,7 +27,7 @@ const Hero = () => {
   useEffect(() => {
     if (refBox.current) {
       const pera = refBox.current.querySelectorAll(".anm-hero-pera");
-      const splitText = new SplitText(pera, { type: "lines, words", linesClass: "overflow-hidden flex",});
+      const splitText = new SplitText(pera, { type: "words"});
       gsap.fromTo(
         splitText.words,
         {
@@ -50,7 +50,7 @@ const Hero = () => {
       <div className="w-full lg:w-full md:w-[80%]">
         <TitleMixImg
           data={titleMixImgData}
-          classNameWrap="text-hero_title_sm w-[80%] md:text-hero_title_md xl:text-hero_title_lg"
+          classNameWrap="text-hero_title_sm w-[970px] md:w-[970px] md:text-hero_title_md xl:text-hero_title_lg"
         />
         <div ref={refBox} className="mt-8">
           <p className="anm-hero-pera overflow-hidden 2xl:max-w-[90%] lg:max-w-[90%] sm:max-w-full font-helvetica text-hero_subtitle_sm md:text-hero_subtitle_md lg:text-hero_subtitle_lg 2xl:text-hero_subtitle_2xl 3xl:text-[clamp(20px,30px,32px)]  md:w-[95%] font-medium text-typo-mute">

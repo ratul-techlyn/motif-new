@@ -15,6 +15,7 @@ type TProps = {
 
 const GroupLayout = ({ children }: TProps) => {
   const scrollContainerRef = useRef<HTMLDivElement>(null);
+  
   useEffect(() => {
     const smoother = ScrollSmoother.create({
       wrapper: "#smooth-wrapper",
