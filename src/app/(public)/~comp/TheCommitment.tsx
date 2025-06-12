@@ -51,11 +51,11 @@ const TheCommitment = () => {
             </p>
             <div className="space-y-4 md:space-y-6">
               <TextAnimation
-                type="fadeIn"
-                splitType="lines"
-                animationOn="lines"
+                type="scrub"
+                splitType="chars"
+                animationOn="chars"
                 duration={0.5}
-                stagger={0.5}
+                stagger={0.01}
               >
                 {para.map((el, idx) => (
                   <div

@@ -32,7 +32,8 @@ const TitleMixImg: React.FC<TitleMixImgProps> = ({ data,classNameLine,classNameT
             duration: 1.5,
             ease: "power3.out",
           }
-        ).fromTo(images,
+        )
+        .fromTo(images,
           { width: 0, opacity: 0 },
           {
             width: 100,
@@ -55,7 +56,7 @@ const TitleMixImg: React.FC<TitleMixImgProps> = ({ data,classNameLine,classNameT
       {data.map((row, rowIndex) => (
         <span
           key={rowIndex}
-          className={["flex flex-wrap  items-center gap-x-2 leading-[1.1] tracking-[1.5px]",classNameLine].join(" ")}
+          className={["flex flex-wrap  items-center gap-x-0 gap-y-2 md:gap-x-2 md:gap-y-0 leading-[1.1] tracking-[1.5px]",classNameLine].join(" ")}
         >
           {row.map((item, itemIndex) =>
             typeof item === "string" ? (
@@ -74,7 +75,7 @@ const TitleMixImg: React.FC<TitleMixImgProps> = ({ data,classNameLine,classNameT
             ) : (
               <span
                 key={itemIndex}
-                className="mix-title-element-image relative mx-2 visible inline-block rounded-full w-[20vw] md:w-[7vw] 3xl:max-w-[200px] h-[40px] md:h-[3vw] 3xl:max-h-[70px] bg-cover bg-center bg-no-repeat"
+                className="mix-title-element-image relative mx-2 visible inline-block rounded-full w-[20vw] md:w-[7vw] max-w-[40px] md:max-w-[100px] 3xl:max-w-[200px] h-[20px]  md:h-[3vw] 3xl:max-h-[70px] bg-cover bg-center bg-no-repeat"
                 style={{
                   backgroundImage: `url(${item.imageSrc})`,
                   aspectRatio: "1 / 1",

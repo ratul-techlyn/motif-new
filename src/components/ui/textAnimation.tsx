@@ -45,14 +45,25 @@ export default function TextAnimation({ splitType, animationOn, children, type, 
         opacity: 0,
       }
 
-      let animation = {};
-
-      if (type === "fadeUp") {
-        animation = fadeUp;
+      const scrub = {
+        opacity: 0.5,
       }
 
-      if (type === "fadeIn") {
-        animation = fadeIn;
+      let animation = {};
+
+      switch (type) {
+        case "fadeUp":
+          animation = fadeUp;
+          break;
+        case "fadeIn":
+          animation = fadeIn;
+          break;
+        case "scrub":
+          animation = scrub;
+          break;
+        default:
+          animation = fadeUp;
+          break;
       }
 
       gsap.from(items, {
