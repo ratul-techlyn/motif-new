@@ -5,7 +5,7 @@ import React from "react";
 const para = [
   "You’ve a great brand story and vision? Then you shouldn’t wait   anymore to let the world know. Your brand is a gem waiting to be polished.",
   "From pinpointing the perfect brand voice to crafting a dazzling eCommerce site, we’re here to ensure your Luxury Lifestyle, Fashion, or Beauty DTC Brand sparkles with success.",
-  "Through data-driven finesse, powerful creatives and artistic brilliance, we create a masterpiece that’s uniquely yours.",
+  "By prioritizing artistic brilliance and human connections, using data as a supportive tool to enhance, not dictate, we create a masterpiece that’s uniquely yours.",
   "While you focus on delivering the best products and building strong customer relationships!",
 ];
 const TheCommitment = () => {
@@ -51,11 +51,11 @@ const TheCommitment = () => {
             </p>
             <div className="space-y-4 md:space-y-6">
               <TextAnimation
-                type="fadeIn"
-                splitType="lines"
-                animationOn="lines"
+                type="scrub"
+                splitType="chars"
+                animationOn="chars"
                 duration={0.5}
-                stagger={0.5}
+                stagger={0.01}
               >
                 {para.map((el, idx) => (
                   <div
@@ -75,8 +75,8 @@ const TheCommitment = () => {
                   <div className="animate-spin_slow w-[90px]">
                     <Image
                       src={"/assets/home/Stamp_wht_we_do.webp"}
-                      width={200}
-                      height={200}
+                      width={400}
+                      height={400}
                       alt=""
                     />
                   </div>

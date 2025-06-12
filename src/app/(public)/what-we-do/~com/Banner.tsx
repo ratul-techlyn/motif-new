@@ -19,10 +19,10 @@ const titleMixImgDataMobile = [
 ];
 
 const description = [
-  "As an incubator company with agency experience, we're here to make sure you succeed on all fronts with data driven methodologies and people first approach.",
+  "As an incubator company with agency experience, ensuring success on all fronts through a human-first approach, where artistic creativity leads and data serves as a supportive tool.",
 ];
 const description_mobile = [
-  "As an incubator company with agency experience, we're here to make sure you succeed on all fronts with data driven methodologies and people first approach.",
+  "As an incubator company with agency experience, ensuring success on all fronts through a human-first approach, where artistic creativity leads and data serves as a supportive tool.",
 ];
 
 

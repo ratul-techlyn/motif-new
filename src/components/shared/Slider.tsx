@@ -77,9 +77,9 @@ const Slider = ({
 
           gsap.from(splitAuthor.lines, {
             opacity: 0,
-            y: 20,
+            x: 20,
             duration: 0.5,
-            stagger: 0.01,
+            stagger: 0.1,
             ease: "power3.out"
           });
         }

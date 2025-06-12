@@ -41,7 +41,7 @@ export default function BlogCarousel({
       }
     }
 
-    loadPosts()
+    // loadPosts()
   }, [categoryId, categorySlug, postsPerPage])
 
 

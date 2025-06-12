@@ -151,7 +151,7 @@ const WorkMerger = () => {
       <div className="text-typo-primary my-[60vh]">
         <h2
           ref={refText}
-          className="text-[calc(100vw/17)] md:text-[clamp(1rem,calc(100vw/30),4rem)] font-[600] font-clash leading-[1.2em] [word-spacing:5px] w-[900px]"
+          className="text-[calc(100vw/17)] md:text-[clamp(1rem,calc(100vw/20),4rem)] font-[600] font-clash leading-[1.2em] [word-spacing:5px] w-[75%] md:w-[75%] lg:w-[75%] 2xl:w-[75%] 3xl:w-[75%]"
         >
           Our Work Merges Dynamic Duos-brand X Product, Strategy X Design, Data
           Anallyst X Technologist To Grow Your Brand.
@@ -159,7 +159,7 @@ const WorkMerger = () => {
       </div>
       <div
         ref={cardContainer}
-        className="grid gird-cols-1 md:grid-cols-3 gap-x-12 gap-y-4 mt-28 "
+        className="grid gird-cols-1 md:grid-cols-3 gap-x-12 gap-y-4 mt-28 w-full overflow-hidden"
       >
         {data.map((el, index) => (
           <article key={el.id} className={`card-${index}`}>

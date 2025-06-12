@@ -4,8 +4,8 @@ import React from "react";
 
 const para = [
   "We understand the restless nights and gnawing frustration when customer acquisition, retention, and brand differentiation seem like distant dreams!",
-  "As an.incubator company, we help DTC & Retail Luxury Lifestyle, Fashion & Beauty brands overcome their challenges by developing targeted marketing strategies, creating unique brand identities, designing personalized experiences to retain customers, providing expert guidance on advertising & brand marketing (offline + digital), and promoting sustainable while ethical practices. Our solutions deliver tangible results and help our clients thrive in a competitive industry.",
-  "MOTIF utilizes it’s years of Agency experience to build digitally native brands and flagships while helps them succeed in the Digital Era.",
+  "As an incubator company, we help DTC & Retail Luxury Lifestyle, Fashion & Beauty brands overcome their challenges by developing targeted marketing strategies, creating unique brand identities, designing personalized experiences to retain customers, providing expert guidance on advertising & brand marketing (offline + digital), and promoting sustainable while ethical practices. Our solutions deliver tangible results and help our partners thrive in a competitive industry.",
+  "MOTIF utilizes it’s years of Agency experience build and grow digitally native brands and physical flagships that thrive far beyond trend cycles.",
 ];
 const TheApproach = () => {
   return (
@@ -35,11 +35,11 @@ const TheApproach = () => {
         <div className="text-[1vw] space-y-6 text-typo-mute">
           <div className="space-y-4 md:space-y-6">
             <TextAnimation
-              type="fadeIn"
-              splitType="lines"
-              animationOn="lines"
+              type="scrub"
+              splitType="chars"
+              animationOn="chars"
               duration={0.5}
-              stagger={0.5}
+              stagger={0.01}
             >
               {para.map((el, idx) => (
                 <div

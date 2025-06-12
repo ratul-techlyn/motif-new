@@ -27,25 +27,15 @@ export default function Home() {
   return (
     <>
       <Hero />
-
       <AsSeenOn />
-
       <BrandProfile />
-
       <TheCommitment />
-
       <WorkMerger />
-
       <TheApproach />
-
       <Driving />
-
       <CaseStudiesCarousel />
-
       <Recommandations />
-
       <BlogCarousel title="Latest Articles" postsPerPage={5} />
-
       <MarqueeNavigation
         text="WHAT WE DO"
         href="/what-we-do"

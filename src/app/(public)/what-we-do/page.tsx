@@ -19,7 +19,9 @@ const WhatWeDo = () => {
 
     return (
         <div>
+            <section className='hero pt-[5%]' >
             <BannerWhat />
+            </section>
             <MotifVideShow />
             <Perspective />
             <section className='layout_normal my-36 w-[90%] md:w-[90%] lg:w-[70%]' >

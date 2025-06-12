@@ -55,26 +55,35 @@ const faq_section = {
     description: ["The only team of", "experts you need on", "your side."],
     accordionList: [
         {
-            title: "Drive Hyper Growth",
+            title: "Culture in Motion",
             description: [
                 {
-                    text: "We’re here to bust myths about eCommerce growth, break all norms and notions about the luxury, lifestyle and fashion industry with a data-backed, research-driven approach and push-back approach that is different from what you see in other agencies. Our focus is to not just help you set up a store online. We want your brand to make an impactful impression on its audience and we go all out for you!",
+                    text: "At the core of every powerful brand is a deep understanding of culture. Brands that don’t just observe culture, they shape it. Culture isn’t just what people follow, it's what they live. Motif uncovers the hidden patterns, values, and aspirations that influence consumer behavior, allowing us to connect brands with people on a deeper level. This isn’t about trend-chasing it’s about shaping authentic stories that resonate far beyond the moment.",
                 },
             ],
         },
-        {
-            title: "Human First Approach",
-            description: [
-                {
-                    text: "To boost conversions, we approach strategy & implementation in a human first, user-centric manner – your customers deserve to be spoiled with mesmerizing experiences and highly-functional, yet flawlessly simple solutions. As a growth-driven team we strategize, create, innovate and market your business solely based on concrete data. Cause we hate assumptions. And we make you skip the guesswork too!",
-                },
-            ],
-        },
+        
         {
             title: "Branding X Marketing",
             description: [
                 {
                     text: "We know how frustrating it is when your branding and marketing strategy are not synced. It’s even worse when your website doesn’t reflect what you stand for! Luckily, we have spent over a decade developing a methodology to scale online businesses the right way, prioritizing both at the same time.",
+                },
+            ],
+        },
+        {
+            title: "Growth Beyond Boundaries",
+            description: [
+                {
+                    text: "Growth is more than numbers. It’s finding new paths, redefining success, and taking risks that pay off. Motif’s approach weaves together data, creativity, and market understanding to drive impactful results. From brand positioning to full-scale market strategies, we ensure every move is purpose-driven, aligned with your vision, and designed for long-term success.",
+                },
+            ],
+        },
+        {
+            title: "Arts X Data in Harmony ",
+            description: [
+                {
+                    text: "At MOTIF®, the fusion of art and data drives brand growth. By blending strategic insights with creative expression, MOTIF® develops tailored Ad-Tech solutions that ensure each campaign resonates deeply. Data informs, but creativity connects—this approach builds lasting emotional connections while fueling brand performance. As Ogilvy puts it, data should never overshadow creativity. Instead, it should empower it. MOTIF® applies this philosophy by leveraging technology to enhance storytelling, creating experiences that are both meaningful and measurable.",
                 },
             ],
         },
@@ -97,33 +106,26 @@ const faq_section = {
                 },
             ],
         },
-        {
-            title: "Believe In Long Term",
-            description: [
-                {
-                    text: "DTC, Brands & eCommerce are constantly evolving, but we embrace and rise to the challenge of adapting to new trends and technology. Our team passionately learns and innovates to optimize, build and execute new things for the end users so that our partner brands can grow constantly. Our deep understanding of the industry luxury lifestyle, fashion and beauty industries guarantees that your brand will be at the forefront, receiving unrivaled levels of service continuously refined to meet and exceed current trends. We are excited to show you how partnering with Motif could crucially impacts the success of your business. Here we are looking for long term partnership cause we can understand the importance and value of real partnerships.",
-                },
-            ],
-        },
+        
     ],
 };
 
 const cards = [
     {
-      title:"Beginners friendly",
-      description:"Jump right in! Our resources cater to all skill levels, ensuring a smooth learning curve for newcomers.",
+      title:"Long Term Growth",
+      description:"MOTIF® forms lasting partnerships, not transactional relationships. Focus is on building long-term brand value that continues to grow year after year.",
     },
     {
-      title:"Beginners friendly",
-      description:"Jump right in! Our resources cater to all skill levels, ensuring a smooth learning curve for newcomers.",
+      title:"Human First Approach",
+      description:"MOTIF® focuses on the emotional connection brands make with their audience, not just the numbers. Every decision is rooted in understanding human behavior.",
     },
     {
-      title:"Beginners friendly",
-      description:"Jump right in! Our resources cater to all skill levels, ensuring a smooth learning curve for newcomers.",
+      title:"Creatives Drive Impacts",
+      description:"Creativity drives everything. Data supports it. MOTIF® uses art and design to captivate audiences, elevating creativity with technology.",
     },
     {
-      title:"Beginners friendly",
-      description:"Jump right in! Our resources cater to all skill levels, ensuring a smooth learning curve for newcomers.",
+      title:"Data Third Brand Lead",
+      description:"Data serves as a support tool, not the driving force. MOTIF® focuses on building emotional connections first, using data to fine-tune strategies.",
     },
   ]
 
@@ -163,15 +165,26 @@ const AboutPage = () => {
                             Making the Motif® waves of excellence since 2015
                         </h3>
 
-                        <p className="text-base md:text-lg leading-[1.5] lg:leading-[1.5] font-medium mt-4">
+                        <p className="text-base leading-[1.5] lg:leading-[1.5] mt-4">
                             Motif® is more than a name; it represents our belief that every
-                            brand should have a unique motif. We craft bold motifs that connect
-                            our partners with people and culture. We don’t just see our partners
-                            as clients; we see them as true partners. Our team includes
-                            eCommerce strategists, branding experts, storytellers, designers,
-                            and brand marketers. Our focus is on helping brands grow
-                            purposefully with a motif behind it.
+                            brand should have a unique motif. Motif® crafts bold, distinctive identities 
+                            that connect brands with people and culture. 
                         </p>
+                        <p className="text-base leading-[1.5] lg:leading-[1.5] mt-4">  
+                            Partners aren’t seen as clients they’re treated as true partners. 
+                            Behind the scenes is a team of artists, eCommerce strategists, branding experts, storytellers, designers, and marketers all focused on helping brands grow with purpose and clarity.
+                        </p>
+                         <p className="text-base leading-[1.5] lg:leading-[1.5] mt-4"> 
+                            Motif® was never meant to be an agency. 
+                            It started as one in 2015, but quickly realized that 
+                            traditional agencies chase short-term wins and surface-level fixes.
+                        </p>
+                        <p className="text-base leading-[1.5] lg:leading-[1.5] mt-4">
+                            So the model was scrapped, and an incubator was built instead one that grows brands through art, 
+                            human behavior, and cultural connection, not through endless decks and empty metrics.
+                        
+                        </p>
+                        
 
                     </div>
                 </div>
@@ -181,8 +194,8 @@ const AboutPage = () => {
                 <ImageSlider sliderList={sliderList} />
             </section>
 
-            <section className="layout_normal px-4 lg:px-0 py-40 w-[90%] md:w-[90%] lg:w-[70%]">
-                <h3 className="text-left text-[2.4em] lg:text-[calc(100vw/20)] 3xl:text-[clamp(100px,5vw,105px)] leading-[1.2] font-semibold text-white">
+            <section className="layout_normal px-4 lg:px-0 py-40 w-[90%] md:w-[50%] lg:w-[50%]">
+                <h3 className="text-left text-[2.4em] lg:text-[calc(100vw/20)] 3xl:text-[clamp(100px,5vw,105px)] leading-[1.2] font-normal text-white">
                     THE FOUNDING STORY OF MOTIF®
 
                 </h3>
@@ -201,7 +214,7 @@ const AboutPage = () => {
                         </h3>
 
 
-                        <p className="text-base md:text-lg leading-[1.5] lg:leading-[1.5] font-medium mt-4">
+                        <p className="text-base leading-[1.5] lg:leading-[1.5] mt-4">
                             In 2015, Ash Ome, a fearless dream-chaser, founded MOTIF® with
                             boundless enthusiasm and unstoppable spirit. With little agency
                             know-how, he transformed a cramped, 4 X 6 garage-like nook into
@@ -209,7 +222,7 @@ const AboutPage = () => {
                             remarkable brands, but he knew that meant collaborating with
                             visionary founders and sharing their entrepreneurial voyage.{" "}
                         </p>
-                        <p className="text-base md:text-lg leading-[1.5] lg:leading-[1.5] font-medium mt-4">
+                        <p className="text-base leading-[1.5] lg:leading-[1.5] mt-4">
                             People called him too bold, too young, and unapologetically
                             ambitious, Ash clung to his dreams. Cause Ash had little something
                             we call Vision. Now, after eight adventurous years, the

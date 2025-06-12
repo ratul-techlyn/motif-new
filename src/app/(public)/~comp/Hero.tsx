@@ -11,12 +11,15 @@ const titleMixImgData: any = [
     // "Building", "best", "In ",
     "Building best In",
     { imageSrc: "/assets/home/hero/hero1.webp", altText: "Hero 1" },
-    "the  world",
+    "the",
+    "world",
     "luxury",
     { imageSrc: "/assets/home/hero/hero2.webp", altText: "Hero 2" },
-    "lifestyle, fashion ",
+    "lifestyle,",
+    "fashion",
     { imageSrc: "/assets/home/hero/hero3.webp", altText: "Hero 3" },
-    " & beauty, brands",
+    " & beauty,",
+    "brands",
     { imageSrc: "/assets/home/hero/hero4.webp", altText: "Hero 4" },
   ],
 ];
@@ -27,7 +30,7 @@ const Hero = () => {
   useEffect(() => {
     if (refBox.current) {
       const pera = refBox.current.querySelectorAll(".anm-hero-pera");
-      const splitText = new SplitText(pera, { type: "lines, words", linesClass: "overflow-hidden flex",});
+      const splitText = new SplitText(pera, { type: "words"});
       gsap.fromTo(
         splitText.words,
         {
@@ -47,10 +50,10 @@ const Hero = () => {
 
   return (
     <section className="layout_normal mt-[11%] md:mt-[11%] px-2 w-[90%] md:w-[90%] lg:w-[70%]">
-      <div className="w-full lg:w-full md:w-[80%]">
+      <div className="w-full">
         <TitleMixImg
           data={titleMixImgData}
-          classNameWrap="text-hero_title_sm w-[80%] md:text-hero_title_md xl:text-hero_title_lg"
+          classNameWrap="text-hero_title_sm w-[100%] md:w-[90%] lg:w-[91%] 2xl:w-[91%] md:text-[4vw] lg:text-[3vw]"
         />
         <div ref={refBox} className="mt-8">
           <p className="anm-hero-pera overflow-hidden 2xl:max-w-[90%] lg:max-w-[90%] sm:max-w-full font-helvetica text-hero_subtitle_sm md:text-hero_subtitle_md lg:text-hero_subtitle_lg 2xl:text-hero_subtitle_2xl 3xl:text-[clamp(20px,30px,32px)]  md:w-[95%] font-medium text-typo-mute">

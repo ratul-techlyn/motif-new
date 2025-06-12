@@ -38,6 +38,14 @@ const faq_section = {
     ],
     accordionList: [
         {
+            title: "Cultural Discovery",
+            description: [
+                {
+                    text: "We understand that brands must be deeply connected to human psychology and culture to create meaningful experiences. Our research explores the cultural forces shaping consumer behavior and use these insights to design brand experiences that resonate emotionally and authentically.",
+                },
+            ]
+        },
+        {
             title: "Brand Launches",
             description: [
                 {
@@ -45,6 +53,7 @@ const faq_section = {
                 },
             ]
         },
+
         {
             title: "Channel Expansions",
             description: [
@@ -54,10 +63,10 @@ const faq_section = {
             ]
         },
         {
-            title: "Creative Production",
+            title: "Impactful Advertising",
             description: [
                 {
-                    text: "Capturing the attention of your audience is essential, and that's why we focus on developing creative strategies and producing content that engages your audience and drives conversions. We understand the importance of creating content that resonates with your audience and sets your brand apart from the competition.",
+                    text: "Advertising should inspire action, but most importantly, it should spark human connection. At MOTIF®, we blend artistry with psychology, designing campaigns that transcend the ordinary. Our ads create emotional responses, driving engagement and conversion with a lasting impact. From the strategy to concept, from production to distribution we do it all to drive impactful message and growth for the brand.",
                 },
             ]
         },
@@ -81,7 +90,16 @@ const faq_section = {
             title: "Engaging Brand Experiences",
             description: [
                 {
-                    text: "Storytelling is a powerful tool for creating engaging and memorable brand experiences. At MOTIF, we can help you develop a brand story that resonates with your audience and sets your brand apart from the competition. We understand that a compelling brand story can create a deeper connection with your audience and drive long-term loyalty.",
+                    text: "Human connection is at the heart of every brand experience. At MOTIF®, we go beyond just design; we create holistic, emotionally charged experiences that reflect the soul of the brand. This approach deepens loyalty and turns customers into passionate advocates.",
+                },
+            ]
+        },
+
+         {
+            title: "Drive Hyper Growth",
+            description: [
+                {
+                    text: "Hyper growth isn’t just about scaling—it’s about scaling meaningfully. MOTIF® combines strategy, tech, and creativity to drive rapid yet sustainable growth, ensuring brands expand while staying true to their core essence.",
                 },
             ]
         },
