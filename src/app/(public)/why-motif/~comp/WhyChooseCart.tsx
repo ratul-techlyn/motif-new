@@ -124,7 +124,7 @@ const WhyChooseCart = () => {
                 //     sticky: false,
                 //     momentumBounce: false,
                 // }}
-                loop={true}
+                loop={false}
                 slidesOffsetBefore={slideOffset}
                 modules={[FreeMode]}
                 className="mySwiper flex flex-nowrap gap-2 text-typo-primary"

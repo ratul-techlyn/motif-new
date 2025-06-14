@@ -1,6 +1,8 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import TitleMixImg from "@/components/shared/TitleMixImg";
 import TitleImgBanner from "@/components/shared/TitleImgBanner";
+import gsap from "gsap";
+import SplitText from "gsap/SplitText";
 
 const titleMixImgData = [
   ["RESHAPING", "BRAND", "GROWTH","WITH",
@@ -29,23 +31,47 @@ const description_mobile = [
 
 
 const BannerWhat = () => {
+  const refBox = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (refBox.current) {
+      const pera = refBox.current.querySelectorAll(".anm-hero-pera");
+      const splitText = new SplitText(pera, { type: "words"});
+      gsap.fromTo(
+        splitText.words,
+        {
+          y: 100,
+          opacity: 0,
+        },
+        {
+          y: 0,
+          opacity: 1,
+          delay: 1,
+          duration: 1,
+          ease: "power3.out",
+        }
+      );
+    }
+  }, []);
   return (
     <>
     {/* mobile  */}
     <section className="block md:hidden layout_normal mt-10 md:mt-20">
-      <div className="w-full md:w-[75%]  ">
+      <div ref={refBox} className="w-full md:w-[75%]  ">
         <div className="flex  flex-wrap">
           <TitleMixImg classNameLine="w-fit" data={titleMixImgDataMobile} />
+
           <div className="mt-6 md:mt-8">
             {description_mobile.map((el, idx) => (
               <p
-                className="mt-1.5 font-helvetica text-hero_subtitle_sm md:text-hero_subtitle_md lg:text-hero_subtitle_lg 2xl:text-hero_subtitle_2xl font-normal leading-[1.4] md:leading-[1.2] lg:leading-[1] text-typo-mute"
+                className="flex overflow-hidden mt-1.5 font-helvetica text-hero_subtitle_sm md:text-hero_subtitle_md lg:text-hero_subtitle_lg 2xl:text-hero_subtitle_2xl font-normal leading-[1.4] md:leading-[1.2] lg:leading-[1] text-typo-mute"
                 key={idx}
               >
-                {el}
+                <span className="anm-hero-pera">{el}</span>
               </p>
             ))}
           </div>
+          
         </div>
       </div>
     </section>

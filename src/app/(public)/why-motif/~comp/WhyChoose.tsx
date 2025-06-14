@@ -12,7 +12,6 @@ const WhyChoose = () => {
         <div className="pi-20 md:pt-40 ">
             <div className='layout_normal w-[90%] md:w-[90%] lg:w-[70%]'>
                 <TwoColCard title={whyChooseData.title} description={whyChooseData.description}/>
-
             </div>
             <div className="py-20">
                 <WhyChooseCart/>

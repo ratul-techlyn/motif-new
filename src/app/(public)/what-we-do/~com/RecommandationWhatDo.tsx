@@ -1,5 +1,6 @@
 import RecommandationCard from '@/components/shared/Recommandations/RecommandationCard';
 import Slider from '@/components/shared/Slider';
+import { usePathname } from 'next/navigation';
 import React from 'react';
 
 const recommendations = [
@@ -39,11 +40,14 @@ const recommendations = [
 
 
 const RecommandationWhatDo = () => {
+  const path = usePathname();
     return (
         <div className='mx-auto mt-20 '>
             <Slider
+                key={path}
                 navigationCustom={true}
                 autoplay={false}
+                fade={true}
                 slides={recommendations.map((el,idx)=><RecommandationCard
                     recommendation={el}
                     key={idx}

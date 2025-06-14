@@ -1,5 +1,6 @@
 import React from "react";
 import Accordion, { TAccordionItem } from "../shared/Accordion";
+import TextAnimation from "../ui/textAnimation";
 
 interface CollaborationProps {
   title?: string;
@@ -17,21 +18,29 @@ const AccordianSection: React.FC<CollaborationProps> = ({
       <div className="self-start md:sticky md:top-20 text-left pl-0">
         {title && (
           <h5 className="uppercase font-helvetica text-section_title_sm md:text-section_title_md lg:text-section_title_lg 2xl:text-section_title_2xl font-semibold text-typo-primary mb-6">
-            {title}
+            <TextAnimation type="fadeUp" splitType="words" animationOn="words">
+              {title}
+            </TextAnimation>
           </h5>
         )}
 
         {description.map((line, index) => (
           <h4
             key={index}
-            className="font-clash text-lft_section_heading_sm md:text-lft_section_heading_md lg:text-lft_section_heading_lg 2xl:text-lft_section_heading_2xl font-semibold leading-tight text-typo-primary">
-            {line}
+            className="font-clash text-lft_section_heading_sm md:text-lft_section_heading_md lg:text-lft_section_heading_lg 2xl:text-lft_section_heading_2xl font-semibold leading-tight text-typo-primary"
+          >
+            <TextAnimation type="fadeUp" splitType="words" animationOn="words">
+              {line}
+            </TextAnimation>
           </h4>
         ))}
       </div>
       <div className="ml-auto mt-16 md:mt-0  md:pl-5 pr-3 flex justify-end">
         <section>
-          <Accordion items={accordionList} titleClass="text-[calc(1.8vw)] font-clash" />
+          <Accordion
+            items={accordionList}
+            titleClass="text-[calc(1.8vw)] font-clash"
+          />
         </section>
       </div>
     </section>

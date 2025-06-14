@@ -1,7 +1,9 @@
 "use client"
 import { cn } from "@/lib/utils";
-import React, { useState, useRef, } from "react";
+import React, { useState, useRef, useEffect, } from "react";
 import { FiMinus, FiPlus } from "react-icons/fi";
+import gsap from "gsap";
+import ScrollTrigger from "gsap/ScrollTrigger";
 
 export type TAccordionItem = {
     title: string;
@@ -30,6 +32,7 @@ const Accordion: React.FC<AccordionProps> = ({
 }) => {
     const [activeStates, setActiveStates] = useState<boolean[]>(Array(items.length).fill(false));
     const contentRefs = useRef<(HTMLDivElement | null)[]>([]);
+    const refBox = useRef<HTMLUListElement | null>(null);
 
     // Dynamically calculate the height for smooth collapse animation
     const getContentHeight = (index: number) => {
@@ -45,10 +48,37 @@ const Accordion: React.FC<AccordionProps> = ({
         );
     };
 
+    useEffect(() => {
+        if (refBox.current) {
+            const accordionItems = refBox.current.querySelectorAll(".accordion-items");
+            const accordionTimeline = gsap.timeline({
+                scrollTrigger: {
+                    trigger: refBox.current,
+                    start: "top center",
+                    end: "bottom center",
+                    toggleActions: "restart none none reset",
+                    scrub: true,
+                }
+            });
+
+            accordionTimeline.fromTo(accordionItems,
+                { opacity: 0, x: 100 },
+                {
+                    opacity: 1,
+                    x: 0,
+                    delay: 0,
+                    duration: 1,
+                    stagger: 0.3,
+                    ease: "power3.out",
+                }
+            )
+        }
+    }, []);
+
     return (
-        <ul>
+        <ul ref={refBox}>
             {items.map((item, idx) => (
-                <li key={idx} className="overflow-hidden">
+                <li key={idx} className="overflow-hidden accordion-items opacity-0">
                     <div className="grid grid-cols-[1fr_50px] gap-1 lg:text-[calc(100vw/60)] text-sm font-semibold text-typo-primary lg:py-6 py-4" onClick={() => toggleActive(idx)}>
                         <h2 className={["leading-tight", titleClass].join(" ")}>{item.title}</h2>
                         <div

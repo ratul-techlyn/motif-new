@@ -2,13 +2,14 @@
 
 import AccordianSection from '@/components/cards/AccordianSection';
 import Image from 'next/image';
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import BatmanRobin from "@/app/(public)/why-motif/~comp/BatmanRobin";
 import WhyChoose from "@/app/(public)/why-motif/~comp/WhyChoose";
 import RecommandationWhyMotif from './~comp/RecommandationWhyMotif';
 import TitleImgBanner from "@/components/shared/TitleImgBanner";
 import MarqueeNavigation from '@/components/marquee-navigation';
 import { useResponsiveSize } from '@/hooks/useResponsiveSize';
+
 const mainBanner = {
     lines: [
         ["NOT",
@@ -92,7 +93,6 @@ const faq_section = {
 
 const WhyMotifPage = () => {
     const iconSize = useResponsiveSize();
-
     return (
         <div className="">
             <section className="layout_normal py-28 lg:py-40 px-4 lg:px-0 w-[90%] md:w-[90%] lg:w-[70%]">
@@ -104,7 +104,7 @@ const WhyMotifPage = () => {
 
             <section className='layout_normal mt-20 '>
                 <div className='w-fit mx-auto '>
-                    <Image src={canvaImgs.image} width={800} height={500} alt='' />
+                    <Image className='image-distortion' src={canvaImgs.image} width={800} height={500} alt='' />
                 </div>
             </section>
             <section className='layout_normal pt-20 lg:pt-40 pb-20 w-[90%] md:w-[90%] lg:w-[70%]'>
@@ -114,13 +114,16 @@ const WhyMotifPage = () => {
                     accordionList={faq_section.accordionList}
                 />
             </section>
+
             {/* TwoCol  */}
             <section className="layout_normal py-32 w-[90%] md:w-[90%] lg:w-[70%] md:py-48 bg-[#050505]">
                 <BatmanRobin />
             </section>
+            
             <WhyChoose />
 
             <RecommandationWhyMotif />
+
             <MarqueeNavigation
                 text="WHAT WE DO"
                 href="/what-we-do"

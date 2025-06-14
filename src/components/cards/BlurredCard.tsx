@@ -13,7 +13,7 @@ const BlurredCard: React.FC<BlurredCardProps> = ({
       className={["group j_card relative rounded-2xl p-5 hover:bg-cardBg bg-[#0D0D0D] bg-cover bg-no-repeat transition-transform transform duration-300", className].join(" ")}
     >
       {/* Background Shape */}
-      <div className="absolute inset-0 z-[-1] bg-hoverCardBg bg-cover bg-no-repeat opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl">
+      <div className="absolute left-[-1px] bottom-[-2px] background-size-[110%] inset-0 z-[-1] bg-hoverCardBg bg-cover bg-no-repeat opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl">
         <div className="absolute w-full h-full bg-bottom bg-no-repeat transform translate bottom-0"></div>
       </div>
 

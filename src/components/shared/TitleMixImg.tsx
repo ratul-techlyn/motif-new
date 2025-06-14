@@ -12,9 +12,10 @@ export type TitleMixImgProps = {
   classNameWrap?: string;
   titleDelay?: number;
   imageDelay?: number;
+  isScroll?: boolean;
 };
 
-const TitleMixImg: React.FC<TitleMixImgProps> = ({ data,classNameLine,classNameText ,classNameWrap, titleDelay = 0, imageDelay = 0}) => {
+const TitleMixImg: React.FC<TitleMixImgProps> = ({ data,classNameLine,classNameText ,classNameWrap, titleDelay = 0, imageDelay = 0, isScroll = false}) => {
   const refBox = useRef<HTMLDivElement>(null);
 
 
@@ -22,7 +23,21 @@ const TitleMixImg: React.FC<TitleMixImgProps> = ({ data,classNameLine,classNameT
       if(refBox.current){
         const lines = refBox.current.querySelectorAll(".mix-title-element-text");
         const images = refBox.current.querySelectorAll(".mix-title-element-image");
-        const titleTimeline = gsap.timeline();
+        let titleTimeline = gsap.timeline();
+
+        if(isScroll){
+          titleTimeline = gsap.timeline({
+            scrollTrigger: {
+              trigger: refBox.current,
+              start: "top bottom",
+              end: "bottom bottom+=200",
+              markers: true,
+              toggleActions: "restart none none reset",
+            }
+          });
+        }
+
+
         titleTimeline.fromTo(lines,
           { y: 200, opacity: 0 },
           {

@@ -45,6 +45,7 @@ const RecommandationWhyMotif = () => {
             <Slider
                 navigationCustom={true}
                 autoplay={false}
+                fade={true}
                 slides={recommendations.map((el,idx)=><RecommandationCard
                     recommendation={el}
                     key={idx}
